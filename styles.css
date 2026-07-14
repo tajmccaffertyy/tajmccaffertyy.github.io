@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+    --color-bg: #FFFFFF;
+    --color-text: #000000;
+    --color-accent: #575757;
+    --color-btn-bg: #252525;
+    --color-btn-text: #FFFFFF;
+    --color-card-bg: #E8E8E8;
+    --color-footer-bg: #000000;
+
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.nav-section {
+    height: 100px;
+    background-color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-text);
+}
+
+h1 { font-size: 58px; font-weight: 700; }
+h2 { font-size: 48px; font-weight: 700; }
+h3 { font-size: 40px; font-weight: 600; }
+
+a {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+button {
+    background-color: var(--color-btn-bg);
+    color: var(--color-btn-text);
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    cursor: pointer;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+.mosaic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.mosaic-card {
+    background-color: var(--color-card-bg);
+    padding: 20px;
+}
+
+footer {
+    background-color: var(--color-footer-bg);
+    color: var(--color-btn-text);
+    text-align: center;
+    padding: 40px 0;
+}
