@@ -13,6 +13,29 @@
     --font-body: 'Inter', sans-serif;
 }
 
+/* Center header */
+.nav-section {
+    text-align: center;
+}
+
+/* Center hero content */
+.hero-section {
+    text-align: center;
+}
+
+/* Evenly spaced bold subtitle */
+.hero-subtitle {
+    width: 60%;
+    margin: var(--space-lg) auto 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: 700;
+    text-align: center;
+}
+
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
