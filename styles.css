@@ -89,28 +89,16 @@ section {
 .mosaic-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-lg);
-    padding: var(--space-xl);
+    gap: 24px;
+    padding: 48px;
 }
 
 .mosaic-card {
-    width: 100%;
+    overflow: hidden;
 }
 
 .mosaic-card img {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
-}
-
-.mosaic-card figure {
-    margin: 0;
-}
-
-.mosaic-card figcaption {
-    padding-top: var(--space-sm);
-    text-align: center;
-}
-    text-align: center;
-}
 }
