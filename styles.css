@@ -103,4 +103,31 @@ footer {
     color: var(--color-btn-text);
     text-align: center;
     padding: 40px 0;
+    /* Portfolio Mosaic Grid */
+
+.mosaic-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+}
+
+.mosaic-card {
+    width: 100%;
+}
+
+.mosaic-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mosaic-card figure {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.mosaic-card figcaption {
+    text-align: center;
+}
 }
