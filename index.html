@@ -18,51 +18,31 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section" aria-labelledby="hero-heading">
-        <div>
-            <h2 id="hero-heading">Capturing Space Through the Lens</h2>
-            <figure>
-                <img src="assets/images/hero-image.jpg" alt="Hero photography banner">
-            </figure>
-            <p>Fashion. Campaigns. Portraits. Sports.</p>
-        </div>
-    </section>
+    <<section class="hero-section" aria-labelledby="hero-heading">
+    <div>
+        <h2 id="hero-heading">Capturing Space Through the Lens</h2>
+
+        <figure>
+    <ssets/images/REMMIE22152.jpg
+</figure>
+
+        <p class="hero-subtitle">
+            <span>Fashion.</span>
+            <span>Campaigns.</span>
+            <span>Portraits.</span>
+            <span>Sports.</span>
+        </p>
+    </div>
+</section>
 
     <!-- Image Section -->
-  <div class="mosaic-grid">
+    <main>
+        <section class="portfolio-section" aria-labelledby="portfolio-heading">
+            <h2 id="portfolio-heading">Featured Work</h2>
 
-    <article class="mosaic-card">
-        <mages/BENJI_10-copy.jpg
-    </article>
-
-    <article class="mosaic-card">
-        _11-copy.jpg" alt="BENJI 11">
-    </article>
-
-    <article class="mosaic-card">
-        Images/BENJI_15-copy.jpg" alt="BENJI 15">
-    </article>
-
-    <article class="mosaic-card">
-        <mages/BENJI_5-copy.jpg
-    </article>
-
-    <article class="mosaic-card">
-        .jpg" alt="BENJI 6">
-    </article>
-
-    <article class="mosaic-card">
-        JI_8-copy.jpg" alt="BENJI 8">
-    </article>
-
-    <article class="mosaic-card">
-        Images/BENJI_9-copy.jpg
-    </article>
-
-    <article class="mosaic-card">
-        <img src="Images   </article>
-
-</div>
+            <div id="gallery" class="masonry-grid"></div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer-section">
@@ -70,6 +50,53 @@
         <p>Contact – 0401 801 850</p>
         <p>Email – taj.mccafferty@gmail.com</p>
     </footer>
+
+<script>
+const images = [
+    "BENJI_10-copy.jpg",
+    "BENJI_11-copy.jpg",
+    "BENJI_15-copy.jpg",
+    "BENJI_5-copy.jpg",
+    "BENJI_6-copy.jpg",
+    "BENJI_8-copy.jpg",
+    "BENJI_9-copy.jpg",
+    "BW1.jpg",
+    "BW2.jpg",
+    "BW3.jpg",
+    "Black-Hoodie-F-3.jpg",
+    "DONNY_10-copy.jpg",
+    "REMMIE21756.jpg",
+    "REMMIE21779.jpg",
+    "REMMIE21866.jpg",
+    "REMMIE21986.jpg",
+    "REMMIE22104.jpg",
+    "REMMIE22152.jpg",
+    "TONY_2.jpg",
+    "TONY_3.jpg",
+    "TONY_5.jpg",
+    "TONY_6.jpg",
+    "TONY_7.jpg"
+];
+
+for (let i = images.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [images[i], images[j]] = [images[j], images[i]];
+}
+
+const gallery = document.getElementById('gallery');
+
+images.forEach(filename => {
+    const item = document.createElement('div');
+    item.className = 'masonry-item';
+
+    const img = document.createElement('img');
+    img.src = `Images/${filename}`;
+    img.alt = filename;
+
+    item.appendChild(img);
+    gallery.appendChild(item);
+});
+</script>
 
 </body>
 </html>
