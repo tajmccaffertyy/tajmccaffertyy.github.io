@@ -86,29 +86,11 @@ section {
     margin: 0 auto;
     padding: 80px 0;
 }
-
-.mosaic-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
-
-.mosaic-card {
-    background-color: var(--color-card-bg);
-    padding: 20px;
-}
-
-footer {
-    background-color: var(--color-footer-bg);
-    color: var(--color-btn-text);
-    text-align: center;
-    padding: 40px 0;
-    /* Portfolio Mosaic Grid */
-
 .mosaic-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space-lg);
+    padding: var(--space-xl);
 }
 
 .mosaic-card {
@@ -122,12 +104,13 @@ footer {
 }
 
 .mosaic-card figure {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
+    margin: 0;
 }
 
 .mosaic-card figcaption {
+    padding-top: var(--space-sm);
+    text-align: center;
+}
     text-align: center;
 }
 }
