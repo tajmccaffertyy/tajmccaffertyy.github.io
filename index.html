@@ -6,6 +6,20 @@
 
     <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Inline override to make the header black and ensure nav links are visible -->
+    <style>
+        .nav-section {
+            background-color: #000;
+            color: #fff;
+        }
+        .nav-section .nav-menu a {
+            color: #fff;
+        }
+        /* Ensure logo alt text contrast if image has transparent background */
+        .nav-section .logo img {
+            background-color: transparent;
+        }
+    </style>
 </head>
 
 <body>
