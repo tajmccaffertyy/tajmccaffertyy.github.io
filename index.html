@@ -19,6 +19,26 @@
         .nav-section .logo img {
             background-color: transparent;
         }
+        /* Center the hero subtitle and fix it at the bottom of the page */
+        .hero-subtitle {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            margin: 0;
+            color: #fff; /* ensures visibility on dark images; adjust if needed */
+            z-index: 9999;
+            font-size: 1.1rem;
+            letter-spacing: 0.06em;
+            background: rgba(0,0,0,0.25); /* subtle backdrop for readability */
+            padding: 6px 10px;
+            border-radius: 6px;
+        }
+        .hero-subtitle span {
+            display: inline-block;
+            margin: 0 8px;
+        }
     </style>
 </head>
 
