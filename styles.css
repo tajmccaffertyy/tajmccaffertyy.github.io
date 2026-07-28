@@ -85,15 +85,17 @@ body {
     display: block;
 }
 
-/* H1 positioned top-right as requested */
+/* H1 positioned bottom-center over the hero image */
 .hero-content {
     position: absolute;
-    top: 40px;   /* requested 40px margin top */
-    right: 40px; /* requested 40px margin right */
+    left: 50%;
+    bottom: 60px;   /* distance from bottom of hero — adjust as needed */
+    transform: translateX(-50%);
     color: #fff;
-    text-align: right;
+    text-align: center;
     z-index: 2; /* sits above hero background but below nav if nav overlaps */
-    max-width: 50%;
+    max-width: 80%;
+    padding: 0 16px;
 }
 
 /* H1 styling (responsive) */
@@ -192,6 +194,6 @@ main, .footer-section, .portfolio-section {
   .nav-container { padding: 10px; }
   .logo svg { height: 72px; }
   .main-nav .nav-menu { gap: 12px; font-size: 11px; }
-  .hero-content { max-width: 80%; right: 16px; top: 20px; }
+  .hero-content { max-width: 90%; left: 50%; right: auto; bottom: 40px; top: auto; transform: translateX(-50%); }
   #hero-heading { font-size: clamp(20px, 6vw, 36px); }
 }
