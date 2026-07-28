@@ -104,6 +104,7 @@ body {
     font-family: var(--font-heading);
     font-size: clamp(28px, 4vw, 48px);
     text-shadow: 0 4px 12px rgba(0,0,0,0.45); /* improves contrast on images */
+    color: #ffffff !important;
 }
 
 /* Subtitle small inline tags below H1 (optional) */
@@ -145,7 +146,7 @@ button {
 }
 
 section {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 80px 0;
 }
