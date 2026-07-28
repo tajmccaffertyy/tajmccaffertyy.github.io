@@ -25,27 +25,26 @@ body {
     margin: 0;
 }
 
-/* NAV: sticky header but only the text sticks — remove background from the sticky element */
+/* NAV: make header overlay the hero, transparent background, and remain fixed (sticky-like) */
 .nav-section {
-    position: relative; /* not fixed so the background won't remain glued */
+    position: fixed; /* overlays the hero and remains at top while scrolling */
+    top: 0;
     left: 0;
     width: 100%;
-    z-index: 20; /* sits above the hero */
+    z-index: 1000; /* sits above the hero */
     pointer-events: auto;
-    background-color: transparent; /* remove the semi-opaque background so only text sticks */
+    background-color: transparent; /* ensure no background */
 }
 
 .nav-container {
-    /* make the inner container the sticky element so only its contents (text/logo) stick */
-    position: sticky;
-    top: 0;
+    /* inner container layout */
     max-width: 1200px;
     margin: 0 auto;
     padding: 12px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: transparent; /* ensure no background is applied to the sticky element */
+    background-color: transparent; /* ensure no background is applied */
 }
 
 /* Logo sizing */
@@ -55,47 +54,55 @@ body {
     display: block;
 }
 
-/* Menu on the right */
-.main-nav .nav-menu {
-    list-style: none;
+/* Navigation using hero-subtitle styles (keeps look but uses links) */
+.main-nav .hero-subtitle {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
     margin: 0;
     padding: 0;
-    display: flex;
-    gap: 28px;
-    align-items: center;
-    font-size: 12px; /* requested menu font-size */
+    font-weight: 600;
+    color: #fff; /* white over image by default; change if hero is light */
     text-transform: uppercase;
     letter-spacing: 0.6px;
 }
 
-.main-nav a {
-    color: #fff; /* white over image by default; change if hero is light */
+/* Links inside subtitle navigation */
+.main-nav .hero-subtitle a {
+    color: inherit;
     text-decoration: none;
-    transition: opacity .15s;
+    opacity: 0.95;
+}
+.main-nav .hero-subtitle a:hover,
+.main-nav .hero-subtitle a:focus {
+    text-decoration: underline;
+    opacity: 1;
 }
 
-.main-nav a:hover { opacity: .8; }
-
-/* HERO: full viewport background image */
+/* HERO: full viewport background image and center H1 */
 .hero-section {
     position: relative;
-    height: 100vh; /* fill viewport */
+    min-height: 100vh; /* full viewport height */
     width: 100%;
     background-image: url('Images/hero-image.jpg');
     background-size: cover;       /* full bleed */
     background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
-    display: block;
+    display: flex;
+    align-items: center;      /* vertical center */
+    justify-content: center;  /* horizontal center */
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0;
     margin-top: 0;
 }
 
-/* H1 positioned bottom-center over the hero image */
+/* H1 positioned center over the hero image */
 .hero-content {
     color: #fff;
     text-align: center;
     z-index: 2; /* sits above hero background but below nav if nav overlaps */
-
 }
 
 /* H1 styling (responsive) */
@@ -109,7 +116,7 @@ body {
     color: #ffffff !important;
 }
 
-/* Subtitle small inline tags below H1 (optional) */
+/* Subtitle (when used elsewhere) */
 .hero-subtitle {
     margin-top: 8px;
     display: inline-block;
@@ -154,8 +161,9 @@ section {
 }
 
 /* Ensure gallery/footer etc are not overlapped by fixed nav */
-main, .footer-section, .portfolio-section {
-    padding-top: 0;
+main {
+    /* set top padding equal to header height (adjust if your header is taller) */
+    padding-top: 120px; /* tweak to match the actual header height */
 }
 
 .footer-section {
@@ -203,37 +211,5 @@ main, .footer-section, .portfolio-section {
   .nav-container { padding: 10px; }
   .logo svg { height: 72px; }
   .main-nav .nav-menu { gap: 12px; font-size: 11px; }
-  .hero-content { max-width: 90%; left: 50%; right: auto; bottom: 40px; top: auto; transform: translateX(-50%); }
   #hero-heading { font-size: clamp(20px, 6vw, 36px); }
 }
-.nav-section {
-            background-color: #000;
-            color: #fff;
-        }
-        .nav-section .nav-menu a {
-            color: #fff;
-        }
-        /* Ensure logo alt text contrast if image has transparent background */
-        .nav-section .logo img {
-            background-color: transparent;
-        }
-        /* Center the hero subtitle and fix it at the bottom of the page */
-        .hero-subtitle {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            margin: 0;
-            color: #fff; /* ensures visibility on dark images; adjust if needed */
-            z-index: 9999;
-            font-size: 1.1rem;
-            letter-spacing: 0.06em;
-            background: rgba(0,0,0,0.75); /* subtle backdrop for readability */
-            padding: 6px 10px;
-            border-radius: 6px;
-        }
-        .hero-subtitle span {
-            display: inline-block;
-            margin: 0 8px;
-        }
