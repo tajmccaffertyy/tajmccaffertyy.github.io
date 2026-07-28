@@ -25,25 +25,27 @@ body {
     margin: 0;
 }
 
-/* NAV: sticky fixed header at the top */
+/* NAV: sticky header but only the text sticks — remove background from the sticky element */
 .nav-section {
-    position: fixed;
-    top: 0;
+    position: relative; /* not fixed so the background won't remain glued */
     left: 0;
     width: 100%;
     z-index: 20; /* sits above the hero */
     pointer-events: auto;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(8px);
+    background-color: transparent; /* remove the semi-opaque background so only text sticks */
 }
 
 .nav-container {
+    /* make the inner container the sticky element so only its contents (text/logo) stick */
+    position: sticky;
+    top: 0;
     max-width: 1200px;
     margin: 0 auto;
     padding: 12px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: transparent; /* ensure no background is applied to the sticky element */
 }
 
 /* Logo sizing */
