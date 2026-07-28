@@ -8,37 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Inline override to make the header black and ensure nav links are visible -->
     <style>
-        .nav-section {
-            background-color: #000;
-            color: #fff;
-        }
-        .nav-section .nav-menu a {
-            color: #fff;
-        }
-        /* Ensure logo alt text contrast if image has transparent background */
-        .nav-section .logo img {
-            background-color: transparent;
-        }
-        /* Center the hero subtitle and fix it at the bottom of the page */
-        .hero-subtitle {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            margin: 0;
-            color: #fff; /* ensures visibility on dark images; adjust if needed */
-            z-index: 9999;
-            font-size: 1.1rem;
-            letter-spacing: 0.06em;
-            background: rgba(0,0,0,0.25); /* subtle backdrop for readability */
-            padding: 6px 10px;
-            border-radius: 6px;
-        }
-        .hero-subtitle span {
-            display: inline-block;
-            margin: 0 8px;
-        }
+        
     </style>
 </head>
 
@@ -68,20 +38,14 @@
         <div class="hero-content">
             <h1 id="hero-heading">Capturing Space Through the Lens</h1>
             <p class="hero-subtitle" aria-hidden="true">
-                <span>Fashion.</span>
-                <span>Campaigns.</span>
-                <span>Portraits.</span>
-                <span>Sports.</span>
+                <span>Portfolio.</span>
+                <span>Services.</span>
+                <span>Aboout.</span>
+                <span>Contact.</span>
             </p>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer-section">
-        <p>Socials – tajmccafferty.photo</p>
-        <p>Contact – 0401 801 850</p>
-        <p>Email – taj.mccafferty@gmail.com</p>
-    </footer>
 
     <!-- Image Section moved to bottom -->
     <main>
@@ -91,6 +55,14 @@
             <div id="gallery" class="masonry-grid"></div>
         </section>
     </main>
+
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <p>Socials – tajmccafferty.photo</p>
+        <p>Contact – 0401 801 850</p>
+        <p>Email – taj.mccafferty@gmail.com</p>
+    </footer>
 
 <script>
 const images = [
