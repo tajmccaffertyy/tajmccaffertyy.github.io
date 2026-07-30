@@ -112,20 +112,73 @@ body {
     /* padding: 0; */
     margin-top: 0;
 }
+
+/* Services section: make h2 full width, layout cards in three columns, and CTA styling */
 .services-section {
-    max-width: 100%;
-    min-height: 60vh;
+    /* constrain width, center content */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
     background-color: #dad8d5;
-    padding: 10%;
-    position: relative;
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     box-sizing: border-box;
-    /* padding: 0; */
-    margin-top: 0;
+
+    /* use grid to allow heading to span full width and cards to form columns */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: start;
 }
+
+/* Ensure the heading spans all columns (full width) */
+.services-section > h2 {
+    grid-column: 1 / -1;
+    margin: 0 0 1rem 0;
+    font-size: 1.75rem;
+    text-align: left;
+}
+
+/* The container for the three service cards takes the full width and creates 3 columns */
+.services-grid {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.service-card {
+    background: var(--color-bg);
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    text-align: left;
+}
+
+/* Services CTA: full width, black background, white text, padding 10% */
+.services-cta {
+    grid-column: 1 / -1;
+    background: #000;
+    color: #fff;
+    padding: 10%;
+    margin: 1rem 0 0 0;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Responsive: stack to single column on smaller screens */
+@media (max-width: 900px) {
+    .services-section {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+    .services-section > h2 { text-align: center; }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .services-cta {
+        padding: 5%;
+    }
+}
+
 /* H1 positioned center over the hero image */
 .hero-content {
     color: #fff;
