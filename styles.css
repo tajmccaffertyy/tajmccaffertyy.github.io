@@ -98,6 +98,34 @@ body {
     margin-top: 0;
 }
 
+.about-section {
+    max-width: 80%;
+    min-height: 60vh;
+    background-color: #dad8d5;
+    padding: 10%;
+    position: relative;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    /* padding: 0; */
+    margin-top: 0;
+}
+.services-section {
+    max-width: 80%;
+    min-height: 60vh;
+    background-color: #dad8d5;
+    padding: 10%;
+    position: relative;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    /* padding: 0; */
+    margin-top: 0;
+}
 /* H1 positioned center over the hero image */
 .hero-content {
     color: #fff;
