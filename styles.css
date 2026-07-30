@@ -176,6 +176,9 @@ body {
     .services-cta {
         padding: 5%;
     }
+    .services-cta a {
+        color: white;
+    }
 }
 
 /* H1 positioned center over the hero image */
