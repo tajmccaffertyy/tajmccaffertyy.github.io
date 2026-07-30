@@ -162,6 +162,9 @@ body {
     border-radius: 6px;
     text-align: center;
 }
+.services-cta a {
+        color: white;
+    }
 
 /* Responsive: stack to single column on smaller screens */
 @media (max-width: 900px) {
