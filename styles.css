@@ -307,10 +307,10 @@ main {
     padding: 40px 0;
   }
 
-  /* About section: remove large percentage padding and tall min-height */
+  /* About section: make shorter — set min-height to 40vh (was effectively taller) */
   .about-section {
     padding: 1.5rem;
-    min-height: auto;
+    min-height: 40vh; /* changed to 40% of viewport height */
     max-width: 95%;
     margin-left: auto;
     margin-right: auto;
