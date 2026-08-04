@@ -348,4 +348,13 @@ main {
   /* Slightly reduce heading sizes for compactness */
   h2 { font-size: 32px; }
   h3 { font-size: 20px; }
+
+  /* Make nav grey boxes (hero-subtitle links) 50% width on mobile */
+  .main-nav .hero-subtitle a {
+    width: 50%;
+    box-sizing: border-box; /* keep padding inside the 50% */
+    display: inline-block; /* allow two boxes per row */
+    text-align: center;
+  }
 }
+
